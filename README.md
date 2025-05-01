@@ -14,7 +14,7 @@ We also use GRPO to train [Qwen-2.5-VL-7B](https://huggingface.co/Qwen/Qwen2.5-V
 
 
 ## 🔥 News
-- [2025/05/2] We release our datasets in huggingface🤗.
+- [2025/05/02] We release our datasets in huggingface🤗.
 
 ## 🔍 Dataset
 
