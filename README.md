@@ -28,7 +28,7 @@ Our data spans the following categories:
 ## Getting Started
 
 ```
-# Install Huggingface package
+# Download the dataset
 pip install huggingface_hub
 
 # Download data to your local dir
@@ -36,7 +36,7 @@ huggingface-cli download zli12321/VideoHallu --repo-type dataset --local-dir ./n
 ```
 
 
-<h3>🧠 Examples</h3>
+## The Dawn of MLLM in Synthetic Videos 🧠 
 
 <div style="border: 2px solid #ddd; border-radius: 10px; padding: 16px; background-color: #f9f9f9; box-shadow: 1px 1px 5px rgba(0,0,0,0.05);">
 
@@ -46,36 +46,54 @@ huggingface-cli download zli12321/VideoHallu --repo-type dataset --local-dir ./n
 <p align="center">
   Prompt (Sora): Generate a quail and a rooster celebrating New Year.
   <img src="images/rooster.gif" width="700"/>
-  <img src="./images/130111746129524_.pic.jpg" style="zoom:20%;" />
+  <img src="./images/130181746130268_.pic.jpg" style="zoom:20%;" />
+  
+</p>
+</details>
+
+<div style="border: 2px solid #ddd; border-radius: 10px; padding: 16px; background-color: #f9f9f9; box-shadow: 1px 1px 5px rgba(0,0,0,0.05);">
+
+<details open>
+<summary><strong>🎬 Video:</strong> Object Falling and Law of Physics</summary>
+
+<p align="center">
+  Prompt (Veo2): A feather and a heavy rock are released at the same height and begin to fall to the ground on Earth.
+  <img src="images/feather_veo2.gif" width="700"/>
+  <img src="./images/130281746130630_.pic.jpg" style="zoom:20%;" />
+  
+</p>
+</details>
+
+<div style="border: 2px solid #ddd; border-radius: 10px; padding: 16px; background-color: #f9f9f9; box-shadow: 1px 1px 5px rgba(0,0,0,0.05);">
+
+<details open>
+<summary><strong>🎬 Video:</strong> Object contact obnormalities</summary>
+
+<p align="center">
+  Prompt (Sora): Generate a man drinking up a cup of wine. 
+  <img src="images/man_drinking_wine.gif" width="700"/>
+  <img src="./images/130291746131015_.pic.jpg" style="zoom:20%;" />
+  
+</p>
+</details>
+
+<div style="border: 2px solid #ddd; border-radius: 10px; padding: 16px; background-color: #f9f9f9; box-shadow: 1px 1px 5px rgba(0,0,0,0.05);">
+
+<details open>
+<summary><strong>🎬 Video:</strong> Breaking process</summary>
+
+<p align="center">
+  Prompt (Sora): Generate the sequence showing a bullet being shot into a watermelon. 
+  <img src="images/watermelon_explode-ezgif.com-video-to-gif-converter.gif" width="700"/>
+  <img src="./images/130301746131484_.pic.jpg" style="zoom:20%;" />
   
 </p>
 </details>
 
 
+## 🚀 Training Set up
 
-
-## 🧠 Aha Moment in Video Reasoning
-
-One of the most intriguing outcomes of reinforcement learning in Video-R1 is the emergence of self-reflection reasoning behaviors, commonly referred to as “aha moments”. Some examples are as follows.
-
-<img src="./images/demo1.png" style="zoom:80%;" />
-
-<img src="./images/demo2.png" style="zoom:80%;" />
-
-
-## 📈 RL Training Curves
-
-The accuracy reward exhibits a generally upward trend, indicating that the model continuously improves its ability to produce correct answers under RL.
-
-Interestingly, the response length curve first drops at the beginning of RL training, then gradually increases. We guess this is because the model initially discards its previous, potentially sub-optimal reasoning style. Then gradually converges to a better and stable reasoning policy.
-
-<img src="./images/curves.png" style="zoom:80%;" />
-
-## The Dawn of MLLM in Synthetic Videos
-![Demo](images/rooster.gif)
-
-
-## 📐 Set up
+We adopt [Video-R1](https://github.com/tulerfeng/Video-R1) training code to finetune model.
 
 ```bash
 git clone https://github.com/tulerfeng/Video-R1
