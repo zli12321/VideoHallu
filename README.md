@@ -1,4 +1,4 @@
-# VideoHallu: : Evaluating and Mitigating Multi-modal Hallucinations for Synthetic Videos
+# VideoHallu: Evaluating and Mitigating Multi-modal Hallucinations for Synthetic Videos
 
 [[📖 Paper](https://arxiv.org/pdf/2503.21776)] [[🤗 Dataset](https://huggingface.co/Video-R1/Video-R1-7B)]
 
