@@ -46,54 +46,10 @@ huggingface-cli download zli12321/VideoHallu --repo-type dataset --local-dir ./n
 <p align="center">
   Prompt (Sora): Generate a quail and a rooster celebrating New Year.
   <img src="images/rooster.gif" width="700"/>
-  <img src="./images/fig1.png" style="zoom:20%;" />
+  <img src="./images/rooster_answer.png" style="zoom:20%;" />
   
 </p>
 </details>
-
----
-
-<h4>🧩 Question:</h4>
-<p>
-You are a robot beginning at the blue built-in bookshelf, facing the same direction as the shelf.<br>
-You want to navigate to the bathroom sink.<br>
-You will perform the following actions (Each <code>[fill in]</code> must be either <code>turn left</code>, <code>turn right</code>, or <code>turn back</code>):
-</p>
-
-<ol>
-  <li>[please fill in]</li>
-  <li>Go forward until you reach the bathroom door</li>
-  <li>[please fill in]</li>
-  <li>Go forward until you reach the sink</li>
-</ol>
-
----
-
-<h4>📝 Options:</h4>
-<ul>
-  <li><strong>A.</strong> Turn Back, Turn Right</li>
-  <li><strong>B.</strong> Turn Left, Turn Left</li>
-  <li><strong>C.</strong> Turn Right, Turn Left</li>
-  <li><strong>D.</strong> Turn Back, Turn Left</li>
-</ul>
-
----
-
-<h4>🤖 Model Response (Video-R1-7B):</h4>
-
-<div style="background-color:#fefefe; border-left: 4px solid #4caf50; padding: 10px 16px;">
-Let me think step-by-step. The bookshelf is on the left side of the room. The bathroom is on the right side.<br>
-So I should turn <strong>right</strong> to head toward it.<br>
-Then go forward to reach the bathroom door.<br>
-At the door, I turn <strong>left</strong> to face the sink.<br><br>
-✅ <strong>Final Answer: C. Turn Right, Turn Left</strong>
-</div>
-
-</div>
-
-
-
-
 
 
 
