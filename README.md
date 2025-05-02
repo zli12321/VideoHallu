@@ -34,7 +34,7 @@ Our data spans the following categories:
 pip install huggingface_hub
 
 # Download data to your local dir
-huggingface-cli download zli12321/VideoHallu --repo-type dataset --local-dir ./new_video_folders --local-dir-use-symlinks False
+huggingface-cli download IntelligenceLab/VideoHallu --repo-type dataset --local-dir ./new_video_folders --local-dir-use-symlinks False
 ```
 
 
