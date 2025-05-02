@@ -30,12 +30,20 @@ Our data spans the following categories:
 ## Getting Started
 
 ```
-# Download the dataset
+# Download the synthetic dataset
 pip install huggingface_hub
 
 # Download data to your local dir
 huggingface-cli download IntelligenceLab/VideoHallu --repo-type dataset --local-dir ./new_video_folders --local-dir-use-symlinks False
+
+# Download and unzip the physben training data videos
+curl -L -o video.part1.rar https://huggingface.co/datasets/WeiChow/PhysBench-train/resolve/main/video.part1.rar
+
+# Unzip data (linux system)
+unrar x video.part1.rar
 ```
+
+
 
 
 ## The Dawn of MLLMs in Synthetic Videos 🧠 
@@ -97,7 +105,7 @@ huggingface-cli download IntelligenceLab/VideoHallu --repo-type dataset --local-
 
 We adopt [Video-R1](https://github.com/tulerfeng/Video-R1) training code to finetune model.
 
-Use our formatted json file and follow their setup to train a model.
+Use our formatted json file (synthetic_data.json and physbench_data.json) and follow their setup to train a model.
 
 ## Acknowledgements
 
