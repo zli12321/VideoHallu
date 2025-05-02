@@ -48,7 +48,7 @@ huggingface-cli download zli12321/VideoHallu --repo-type dataset --local-dir ./n
 <p align="center">
   Prompt (Sora): Generate a quail and a rooster celebrating New Year.
   <img src="images/rooster.gif" width="700"/>
-  <img src="./images/130181746130268_.pic.jpg" style="zoom:20%;" />
+  <img src="./images/131021746146018_.pic.jpg" style="zoom:20%;" />
   
 </p>
 </details>
