@@ -2,7 +2,7 @@
 
 [Zongxia Li*](https://zli12321.github.io/), [Xiyang Wu*](https://wuxiyang1996.github.io/), [Yubin Qin](https://www.linkedin.com/in/yubin-qin/), [Guangyao Shi](https://guangyaoshi.github.io/), [Hongyang Du](https://github.com/SmashedPython), [Dinesh Manocha](https://www.cs.umd.edu/people/dmanocha), [Tianyi Zhou](https://tianyizhou.github.io/), [Jordan Lee Boyd-Graber](https://users.umiacs.umd.edu/~ying/)
 
-[[📖 Paper](https://arxiv.org/pdf/2503.21776)] [[🤗 Dataset](https://huggingface.co/datasets/zli12321/VideoHalluB)]
+[[📖 Paper](https://arxiv.org/pdf/2503.21776)] [[🤗 Dataset](https://huggingface.co/datasets/zli12321/VideoHalluB)] [[Website🌍](https://github.com/SmashedPython/videohallu.github.io)]
 
 
 
