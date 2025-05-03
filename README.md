@@ -96,7 +96,7 @@ unrar x video.part1.rar
 <p align="center">
   Prompt (Sora): Generate the sequence showing a bullet being shot into a watermelon. 
   <img src="images/watermelon_explode-ezgif.com-video-to-gif-converter.gif" width="700"/>
-  <img src="./images/130301746131484_.pic.jpg" style="zoom:20%;" />
+  <img src="./images/133151746288503_.pic.jpg" style="zoom:20%;" />
   
 </p>
 </details>
