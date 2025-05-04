@@ -18,8 +18,15 @@ We also use GRPO to train [Qwen-2.5-VL-7B](https://huggingface.co/Qwen/Qwen2.5-V
 ## 🔥 News
 - [2025/05/02] We expand our dataset with more QA pairs🤗.
 - [2025/05/02] We release our datasets in huggingface🤗.
+- [2025/05/02] We release our GRPO free-form RewardModel🤗.
 
-## 🔍 Dataset
+
+## Table of Contents
+* 1. [Dataset](#dataset)
+* 2. [Reward Model](#rb)
+* 2. [Training](#training)
+
+## 🔍 <a name='dataset'></a>Dataset
 
 To facilitate GRPO training, we also randomly sample 1,000 videos from [PhysBench](https://huggingface.co/datasets/WeiChow/PhysBench-train) training data to first improve model' reasoning abilities in real-world videos, then train the model on part of our synthetic videos.
 
@@ -102,7 +109,28 @@ unrar x video.part1.rar
 </details>
 
 
-## 🚀 Training Set up
+## 🚀 <a name='rb'></a>Reward Model
+We use [ModernBERT](https://huggingface.co/docs/transformers/en/model_doc/modernbert) as the base model to finetune on [MOCHA](https://arxiv.org/abs/2010.03636), [Prometheus-preference](https://huggingface.co/datasets/prometheus-eval/Preference-Collection), [Pedants](https://arxiv.org/abs/2402.11161) to evaluate free-form text generations. We use RewardBert as the reward in GRPO finetuning.
+
+#### Method: `compute_score`
+**Parameters**
+- `reference_answer` (list of str): A list of gold (correct) answers to the question
+- `candidate_answer` (str): The answer provided by a candidate that needs to be evaluated
+
+**Returns**
+- `tuple`: A tuple of normalized and raw scores.
+
+```python
+from qa_metrics.RewardBert import RewardBert
+
+rb = RewardBert(device='cuda')
+reference_answer = "The Frog Prince"
+candidate_answer = "The movie \"The Princess and the Frog\" is loosely based off the Brother Grimm's \"Iron Henry\""
+rb.compute_score(reference_answer, candidate_answer)
+# (0.29113227128982544, 2.1645290851593018)
+```
+
+## 🚀 <a name='training'></a>Training Set up
 
 We adopt [Video-R1](https://github.com/tulerfeng/Video-R1) training code to finetune model.
 
