@@ -21,16 +21,25 @@ Moreover, we post-train current SoTA MLLMs, [Qwen-2.5-VL-7B](https://huggingface
 
 
 ## Table of Contents
-* 1. [Dataset](#dataset)
+* 1. [Benchmark](#benchmark)
 * 2. [Reward Model](#rb)
 * 2. [Training](#training)
 
-## 🔍 <a name='dataset'></a>Dataset
+## 🔍 <a name='benchmark'></a>Dataset
 
-To facilitate GRPO training, we also randomly sample 1,000 videos from [PhysBench](https://huggingface.co/datasets/WeiChow/PhysBench-train) training data to first improve model' reasoning abilities in real-world videos, then train the model on part of our synthetic videos.
+We design our benchmark, VideoHallu, around four question categories aimed at probing hallucinations in synthetic video understanding, organized by the level of reasoning required from MLLMs to perform video-question answering in practice. The benchmark spans from perceptual understanding to high-level abstract reasoning.
+* **Alignment** checks if the model correctly identifies and understands entities using visual and textual cues. 
+* **Spatial-temporal Consistency** examines whether the model can track entity motion across frames.
+* **Common Sense Reasoning** tests if the model can reason based on its knowledge.
+* **Physics** assesses if the model applies physical laws to entity motions and procedural understanding.
 
-Our data spans the following categories:
+Each question in a category may also be assigned to multiple sub-categories, depending on the specific aspects it targets. Detailed annotations and sub-category breakdowns are available [here](https://huggingface.co/datasets/zli12321/VideoHalluB):
 
+| Updated on  |            HuggingFace                         | Dataset Size |
+|-------------|:------------------------------------------------:|:------------:|
+| May, 2, 2025 | [HuggingFace](https://huggingface.co/datasets/zli12321/VideoHalluB) |     3233    |
+
+The overview of the organization of our benchmark is provide here:
 <img src="./images/fig1.png" style="zoom:20%;" />
 
 
