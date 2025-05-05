@@ -1,10 +1,10 @@
 # VideoHallu: Evaluating and Mitigating Multi-modal Hallucinations for Synthetic Videos
 
-[Zongxia Li*](https://zli12321.github.io/), [Xiyang Wu*](https://wuxiyang1996.github.io/), [Yubin Qin](https://www.linkedin.com/in/yubin-qin/), [Guangyao Shi](https://guangyaoshi.github.io/), [Hongyang Du](https://github.com/SmashedPython), [Dinesh Manocha](https://www.cs.umd.edu/people/dmanocha), [Tianyi Zhou](https://tianyizhou.github.io/), [Jordan Lee Boyd-Graber](https://users.umiacs.umd.edu/~ying/)
+[Zongxia Li*](https://zli12321.github.io/), [Xiyang Wu*](https://wuxiyang1996.github.io/), [Yubin Qin](https://www.linkedin.com/in/yubin-qin/), [Hongyang Du](https://github.com/SmashedPython), [Guangyao Shi](https://guangyaoshi.github.io/), [Dinesh Manocha](https://www.cs.umd.edu/people/dmanocha), [Tianyi Zhou](https://tianyizhou.github.io/), [Jordan Lee Boyd-Graber](https://users.umiacs.umd.edu/~ying/)
 
 [[📖 Paper](https://github.com/zli12321/VideoHallu/blob/main/paper.pdf)] [[🤗 Dataset](https://huggingface.co/datasets/zli12321/VideoHalluB)] [[🌍Website](https://smashedpython.github.io/videohallu.github.io/)]
 
-
+<img src="./images/teaser.png" style="zoom:20%;" />
 
 ## 👀 About VideoHallu
 
