@@ -75,7 +75,10 @@ unrar x video.part1.rar
 
 We present selected cases from SoTA MLLM evaluations across each category. Hallucinations in model answers, common sense or physics violations in videos, and other notable cues in the video, questions, or ground truth are highlighted to assist the reader's understanding. More examples can be found in the Appendix of [our paper](https://github.com/zli12321/VideoHallu/blob/main/paper.pdf).
 
-<div style="border: 2px solid #ddd; border-radius: 10px; padding: 16px; background-color: #f9f9f9; box-shadow: 1px 1px 5px rgba(0,0,0,0.05);">
+**Note:** The legend below explains all the symbols used to represent the State-of-the-Art (SoTA) MLLMs featured in our showcases for synthetic video generation and video question-answering.
+<p align="center">
+  <img src="images/legend.png" width="700"/>
+</p>
 
 ### Alignment
 **🗣️ Video Generation Prompt:** A young male athlete is playing basketball on an outdoor court, performing impressive dribbling and slam dunks.
