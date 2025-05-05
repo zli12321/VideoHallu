@@ -21,12 +21,17 @@ Moreover, we post-train current SoTA MLLMs, [Qwen-2.5-VL-7B](https://huggingface
 
 
 ## Table of Contents
-* 1. [Benchmark](#benchmark)
-* 2. [Getting Started](#setup)
-* 2. [Reward Model](#rb)
-* 2. [Training](#training)
+* [Benchmark](#benchmark)
+* [Getting Started](#setup)
+* [The Dawn of MLLMs in Synthetic Videos](#showcase)
+* [Evaluation over SoTA MLLMs](#evaluation)
+* [Reward Model](#rb)
+* [Training](#training)
+* [Fine-tuning Results](#evaluation_ft)
+* [Acknowledgements](#ak)
+* [Citations](#citations)
 
-## 🔍 <a name='benchmark'></a>Dataset
+## 🔍 <a name='benchmark'></a>Benchmark
 
 We design our benchmark, VideoHallu, around four question categories aimed at probing hallucinations in synthetic video understanding, organized by the level of reasoning required from MLLMs to perform video-question answering in practice. The benchmark spans from perceptual understanding to high-level abstract reasoning.
 * **Alignment** checks if the model correctly identifies and understands entities using visual and textual cues. 
@@ -66,64 +71,79 @@ unrar x video.part1.rar
 
 
 
-## 🧠 The Dawn of MLLMs in Synthetic Videos 
+## <a name='showcase'></a>🧠 The Dawn of MLLMs in Synthetic Videos 
 
-We showcase a few hallucination examples over each category we have 
+We present selected cases from SoTA MLLM evaluations across each category. Hallucinations in model answers, common sense or physics violations in videos, and other notable cues in the video, questions, or ground truth are highlighted to assist the reader's understanding. More examples can be found in the Appendix of [our paper](https://github.com/zli12321/VideoHallu/blob/main/paper.pdf).
 
 <div style="border: 2px solid #ddd; border-radius: 10px; padding: 16px; background-color: #f9f9f9; box-shadow: 1px 1px 5px rgba(0,0,0,0.05);">
 
-<details open>
-<summary><strong>🎬 Video:</strong> Quail Transforming into rooster</summary>
+### Alignment
+**🗣️ Video Generation Prompt:** A young male athlete is playing basketball on an outdoor court, performing impressive dribbling and slam dunks.
+
+**🎬 Synthetic Video:** 
 
 <p align="center">
-  Prompt (Sora): Generate a quail and a rooster celebrating New Year.
-  <img src="images/rooster.gif" width="700"/>
+  <img src="images/alignment.gif" width="700"/>
+</p>
+
+**🤖 Video Question-Answering by MLLMs:** 
+<p align="center">
   <img src="./images/alignment.png" width="700" />
-  
 </p>
-</details>
 
-<div style="border: 2px solid #ddd; border-radius: 10px; padding: 16px; background-color: #f9f9f9; box-shadow: 1px 1px 5px rgba(0,0,0,0.05);">
+### Spatial-temporal Consistency
+**🗣️ Video Generation Prompt:** Generate a quail and a rooster celebrating New Year.
 
-<details open>
-<summary><strong>🎬 Video:</strong> Object Falling and Law of Physics</summary>
-
+**🎬 Synthetic Video:** 
 <p align="center">
-  Prompt (Veo2): A feather and a heavy rock are released at the same height and begin to fall to the ground on Earth.
-  <img src="images/feather_veo2.gif" width="700"/>
+  <img src="images/rooster.gif" width="700"/>
+</p>
+
+**🤖 Video Question-Answering by MLLMs:** 
+<p align="center">
   <img src="./images/STC.png" width="700" />
-  
 </p>
-</details>
 
-<div style="border: 2px solid #ddd; border-radius: 10px; padding: 16px; background-color: #f9f9f9; box-shadow: 1px 1px 5px rgba(0,0,0,0.05);">
+### Common Sense Reasoning
+**🗣️ Video Generation Prompt:** A feather and a heavy rock are released at the same height and begin to fall to the ground on Earth.
 
-<details open>
-<summary><strong>🎬 Video:</strong> Object contact obnormalities</summary>
+**🎬 Synthetic Video:** 
+<p align="center">
+  <img src="images/feather_veo2.gif" width="700"/>
+</p>
+
+**🤖 Video Question-Answering by MLLMs:** 
 
 <p align="center">
-  Prompt (Sora): Generate a man drinking up a cup of wine. 
-  <img src="images/man_drinking_wine.gif" width="700"/>
   <img src="./images/CSR.png" width="700" />
-  
 </p>
-</details>
 
+### Physics
+**🗣️ Video Generation Prompt:** Generate the sequence showing a bullet being shot into a watermelon.
 <div style="border: 2px solid #ddd; border-radius: 10px; padding: 16px; background-color: #f9f9f9; box-shadow: 1px 1px 5px rgba(0,0,0,0.05);">
 
-<details open>
-<summary><strong>🎬 Video:</strong> Breaking process</summary>
-
+**🎬 Synthetic Video:** 
 <p align="center">
-  Prompt (Sora): Generate the sequence showing a bullet being shot into a watermelon. 
   <img src="images/watermelon_explode-ezgif.com-video-to-gif-converter.gif" width="700"/>
-  <img src="./images/P.png" width="700" />
-  
 </p>
-</details>
 
+**🤖 Video Question-Answering by MLLMs:** 
+<p align="center">
+  <img src="./images/P.png" width="700" />
+</p>
 
-## 🚀 <a name='rb'></a>Reward Model
+## <a name='evaluation'></a>📊 Evaluation over SoTA MLLMs
+We evaluate diverse SoTA models across sizes and training strategies, reporting both overall and sub-category accuracies. Qwen2.5-VL-32B achieves the highest overall performance among all models.
+<p align="center">
+  <img src="images/all_results.png" style="zoom:20%;" />
+</p>
+
+We evaluate SoTA MLLMs on VideoHallu, with results broken down by sub-category. From left to right, we show: (a) models under 7B parameters; (b) models between 7B–38B; (c) R1 fine-tuned models; and (d) large black-box MLLMs. While many perform well on alignment tasks, they remain prone to hallucinations in reasoning-heavy tasks, with notably weaker performance on physics and commonsense reasoning.
+<p align="center">
+  <img src="./images/all_radar.png" style="zoom:20%;" />
+</p>
+
+## 🏅 <a name='rb'></a>Reward Model
 We use [ModernBERT](https://huggingface.co/docs/transformers/en/model_doc/modernbert) as the base model to finetune on [MOCHA](https://arxiv.org/abs/2010.03636), [Prometheus-preference](https://huggingface.co/datasets/prometheus-eval/Preference-Collection), [Pedants](https://arxiv.org/abs/2402.11161) to evaluate free-form text generations. We use RewardBert as the reward in GRPO finetuning.
 
 #### Method: `compute_score`
@@ -146,15 +166,26 @@ rb.compute_score(reference_answer, candidate_answer)
 
 ## 🚀 <a name='training'></a>Training Set up
 
-We adopt [Video-R1](https://github.com/tulerfeng/Video-R1) training code to finetune model.
+We adopt [Video-R1](https://github.com/tulerfeng/Video-R1) training code to fine-tune the model.
 
-Use our formatted json file (synthetic_data.json and physbench_data.json) and follow their setup to train a model.
+Use our formatted JSON files ([synthetic_data_split.json](https://github.com/zli12321/VideoHallu/blob/main/Data/synthetic_data_split.json) and [physbench_train_split.json](https://github.com/zli12321/VideoHallu/blob/main/Data/physbench_train_split.json)) and follow their setup to train a model.
 
-## Acknowledgements
+## 📊 <a name='evaluation_ft'></a>Fine-tuning Results
+We evaluate models fine-tuned on either domain-specific sub-datasets or curriculum-based composite datasets. Results show that models trained only on general real-world videos yield little to no gains on synthetic video understanding. Incorporating general physics data improves physics reasoning, and a curriculum starting with real-world physics followed by synthetic data leads to a 2.8% performance boost.
+<p align="center">
+  <img src="images/ft_results.png" style="zoom:20%;" />
+</p>
+
+We show results for (a) previous SoTA MLLMs, (b) models fine-tuned on sub-datasets, and (c) models fine-tuned on the full dataset via curriculum learning. Compared to the baseline (Qwen2.5-VL-7B), reinforcement fine-tuning on commonsense and physics data improves models' reasoning and overall performance in synthetic video understanding.
+<p align="center">
+  <img src="images/ft_radar.png" style="zoom:20%;" />
+</p>
+
+## <a name='ak'></a>Acknowledgement
 
 We sincerely appreciate the contributions of the open-source community. The related projects are as follows: [R1-V](https://github.com/Deep-Agent/R1-V) , [DeepSeek-R1](https://github.com/deepseek-ai/DeepSeek-R1) , [Video-R1](https://github.com/tulerfeng/Video-R1), [Qwen-2.5-VL](https://arxiv.org/abs/2502.13923)
 
-## Citations
+## <a name='citations'></a>Citations
 
 If you find our work helpful for your research, please consider citing our work.   
 
