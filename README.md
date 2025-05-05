@@ -22,6 +22,7 @@ Moreover, we post-train current SoTA MLLMs, [Qwen-2.5-VL-7B](https://huggingface
 
 ## Table of Contents
 * 1. [Benchmark](#benchmark)
+* 2. [Getting Started](#setup)
 * 2. [Reward Model](#rb)
 * 2. [Training](#training)
 
@@ -39,11 +40,14 @@ Each question in a category may also be assigned to multiple sub-categories, dep
 |-------------|:------------------------------------------------:|:------------:|
 | May, 2, 2025 | [HuggingFace](https://huggingface.co/datasets/zli12321/VideoHalluB) |     3233    |
 
-The overview of the organization of our benchmark is provide here:
+Below is an overview of our benchmark’s organization, including the high-level question categories, ranked by the level of reasoning required by MLLMs, and their corresponding sub-category breakdowns.
+
 <img src="./images/fig1.png" style="zoom:20%;" />
 
 
-## Getting Started
+## 📖 <a name='setup'></a>Getting Started
+
+To set up our benchmark, please follow the steps provided below:
 
 ```
 # Download the synthetic dataset
@@ -62,7 +66,7 @@ unrar x video.part1.rar
 
 
 
-## The Dawn of MLLMs in Synthetic Videos 🧠 
+## 🧠 The Dawn of MLLMs in Synthetic Videos 
 
 <div style="border: 2px solid #ddd; border-radius: 10px; padding: 16px; background-color: #f9f9f9; box-shadow: 1px 1px 5px rgba(0,0,0,0.05);">
 
@@ -72,7 +76,7 @@ unrar x video.part1.rar
 <p align="center">
   Prompt (Sora): Generate a quail and a rooster celebrating New Year.
   <img src="images/rooster.gif" width="700"/>
-  <img src="./images/131021746146018_.pic.jpg" style="zoom:20%;" />
+  <img src="./images/131021746146018_.pic.jpg" width="700" />
   
 </p>
 </details>
@@ -85,7 +89,7 @@ unrar x video.part1.rar
 <p align="center">
   Prompt (Veo2): A feather and a heavy rock are released at the same height and begin to fall to the ground on Earth.
   <img src="images/feather_veo2.gif" width="700"/>
-  <img src="./images/130281746130630_.pic.jpg" style="zoom:20%;" />
+  <img src="./images/130281746130630_.pic.jpg" width="700" />
   
 </p>
 </details>
@@ -98,7 +102,7 @@ unrar x video.part1.rar
 <p align="center">
   Prompt (Sora): Generate a man drinking up a cup of wine. 
   <img src="images/man_drinking_wine.gif" width="700"/>
-  <img src="./images/130291746131015_.pic.jpg" style="zoom:20%;" />
+  <img src="./images/130291746131015_.pic.jpg" width="700" />
   
 </p>
 </details>
@@ -111,7 +115,7 @@ unrar x video.part1.rar
 <p align="center">
   Prompt (Sora): Generate the sequence showing a bullet being shot into a watermelon. 
   <img src="images/watermelon_explode-ezgif.com-video-to-gif-converter.gif" width="700"/>
-  <img src="./images/133151746288503_.pic.jpg" style="zoom:20%;" />
+  <img src="./images/133151746288503_.pic.jpg" width="700" />
   
 </p>
 </details>
