@@ -123,7 +123,6 @@ We present selected cases from SoTA MLLM evaluations across each category. Hallu
 
 ### Physics
 **🗣️ Video Generation Prompt:** Generate the sequence showing a bullet being shot into a watermelon.
-<div style="border: 2px solid #ddd; border-radius: 10px; padding: 16px; background-color: #f9f9f9; box-shadow: 1px 1px 5px rgba(0,0,0,0.05);">
 
 **🎬 Synthetic Video:** 
 <p align="center">
