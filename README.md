@@ -2,7 +2,7 @@
 
 [Zongxia Li*](https://zli12321.github.io/), [Xiyang Wu*](https://wuxiyang1996.github.io/), [Yubin Qin](https://www.linkedin.com/in/yubin-qin/), [Hongyang Du](https://smashedpython.github.io/HongyangDu.github.io/), [Guangyao Shi](https://guangyaoshi.github.io/), [Dinesh Manocha](https://www.cs.umd.edu/people/dmanocha), [Tianyi Zhou](https://tianyizhou.github.io/), [Jordan Lee Boyd-Graber](https://users.umiacs.umd.edu/~ying/)
 
-[[📖 Paper](https://github.com/zli12321/VideoHallu/blob/main/paper.pdf)] [[🤗 Dataset](https://huggingface.co/datasets/zli12321/VideoHalluB)] [[🌍Website](https://smashedpython.github.io/videohallu.github.io/)]
+[[📖 Paper](https://arxiv.org/abs/2505.01481)] [[🤗 Dataset](https://huggingface.co/datasets/zli12321/VideoHalluB)] [[🌍Website](https://smashedpython.github.io/videohallu.github.io/)]
 
 <img src="./images/teaser.png" style="zoom:20%;" />
 
@@ -73,7 +73,7 @@ unrar x video.part1.rar
 
 ## <a name='showcase'></a>🧠 The Dawn of MLLMs in Synthetic Videos 
 
-We present selected cases from SoTA MLLM evaluations across each category. Hallucinations in model answers, common sense or physics violations in videos, and other notable cues in the video, questions, or ground truth are highlighted to assist the reader's understanding. More examples can be found in the Appendix of [our paper](https://github.com/zli12321/VideoHallu/blob/main/paper.pdf).
+We present selected cases from SoTA MLLM evaluations across each category. Hallucinations in model answers, common sense or physics violations in videos, and other notable cues in the video, questions, or ground truth are highlighted to assist the reader's understanding. More examples can be found in the Appendix of [our paper](https://arxiv.org/abs/2505.01481).
 
 **Note:** The legend below explains all the symbols used to represent the State-of-the-Art (SoTA) MLLMs featured in our showcases for synthetic video generation and video question-answering.
 <p align="center">
