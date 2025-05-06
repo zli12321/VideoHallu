@@ -193,11 +193,14 @@ We sincerely appreciate the contributions of the open-source community. The rela
 If you find our work helpful for your research, please consider citing our work.   
 
 ```
-@article{li2025video,
-  title={VideoHallu: Evaluating and Mitigating Multi-modal Hallucinations for Synthetic Videos},
-  author={{Zongxia Li and Xiyang Wu and Yubin Qin and Guangyao Shi and Hongyang Du and Dinesh Manocha and Tianyi Zhou and Jordan Lee Boyd-Graber}},
-  journal={},
-  year={2025}
+@misc{li2025videohalluevaluatingmitigatingmultimodal,
+      title={VideoHallu: Evaluating and Mitigating Multi-modal Hallucinations for Synthetic Videos}, 
+      author={Zongxia Li and Xiyang Wu and Yubin Qin and Guangyao Shi and Hongyang Du and Dinesh Manocha and Tianyi Zhou and Jordan Lee Boyd-Graber},
+      year={2025},
+      eprint={2505.01481},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2505.01481}, 
 }
 
 
