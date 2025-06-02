@@ -17,7 +17,7 @@ Moreover, we post-train current SoTA MLLMs, [Qwen-2.5-VL-7B](https://huggingface
 ## 🔥 News
 - [2025/05/02] We expand our dataset with more QA pairs🤗.
 - [2025/05/02] We release our [datasets](https://huggingface.co/datasets/IntelligenceLab/VideoHallu)🤗.
-- [2025/05/02] We release our GRPO free-form [RewardModel](https://huggingface.co/IntelligenceLab/RewardPreferenceBert/settings)🤗.
+- [2025/05/02] We release our GRPO free-form [RewardModel](https://huggingface.co/IntelligenceLab/RewardPreferenceBert)🤗.
 
 
 ## Table of Contents
