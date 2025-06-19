@@ -30,10 +30,13 @@ from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
 from rouge_score import rouge_scorer
 # from qa_metrics.pedant import PEDANT
 import re
-from reward_bert import *
+# from reward_bert import *
+from qa_metrics.RewardBert import RewardBert
 # torch.set_float32_matmul_precision('high')
+
 pedant = None
-bert = RewardBert()
+
+bert =  RewardBert(device='cuda')
 
 @dataclass
 class GRPOScriptArguments(ScriptArguments):
