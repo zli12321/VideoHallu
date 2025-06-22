@@ -168,6 +168,9 @@ We adopt [Video-R1](https://github.com/tulerfeng/Video-R1) training code to fine
 
 Use our formatted JSON files ([synthetic_data_split.json](https://github.com/zli12321/VideoHallu/blob/main/Data/synthetic_data_split.json) and [physbench_train_split.json](https://github.com/zli12321/VideoHallu/blob/main/Data/physbench_train_split.json)) and follow their setup to train a model.
 
+##### Run our training script
+```src/scripts/run_grpo_vllm_qwen25vl-mixed-bert-7B-synthetic.sh```
+
 ## 📊 <a name='evaluation_ft'></a>Fine-tuning Results
 We evaluate models fine-tuned on either domain-specific sub-datasets or curriculum-based composite datasets. Results show that models trained only on general real-world videos yield little to no gains on synthetic video understanding. Incorporating general physics data improves physics reasoning, and a curriculum starting with real-world physics followed by synthetic data leads to a 2.8% performance boost.
 <p align="center">
