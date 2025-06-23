@@ -64,6 +64,9 @@ curl -L -o video.part1.rar https://huggingface.co/datasets/WeiChow/PhysBench-tra
 unrar x video.part1.rar
 ```
 
+## 📖 <a name='inference'></a>Running inference
+
+To run naive inference on our dataset, we provided some example scripts [here](https://github.com/zli12321/videoHallu_inference/tree/main). 
 
 
 
