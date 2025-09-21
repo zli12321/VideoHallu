@@ -1,4 +1,4 @@
-RowID,Model,Caption Notes,annotator,video_path,Prompt,Question,Answer,Categorization-1,Categorization-2,set_split
+RowID,Model,Caption Notes,annotator,video_path,Prompt,Question,Answer,Categorization-1,Categorization-2,set
 59,Runawaygen2,,wxy,./Runawaygen2/1uPVDzHcNEAApEhzlewBnx639vlNPHhLL.mp4,Generate a video for launching two rockets,How many rockets are launched in the video?,Two,Alignment,Alignment - Entity Counting,test
 59,Runawaygen2,,wxy,./Runawaygen2/1uPVDzHcNEAApEhzlewBnx639vlNPHhLL.mp4,Generate a video for launching two rockets,Do all rockets launch at the same pace and clear the tower simultaneously?,"No, one of them is left behind and still held by the launch clamp.",Physics,Spatial-temporal Consistency - Temporal Dynamics,test
 59,Runawaygen2,,wxy,./Runawaygen2/1uPVDzHcNEAApEhzlewBnx639vlNPHhLL.mp4,Generate a video for launching two rockets,Are there any fast-moving objects in this video?,"Yes, there are two launching rockets.",Alignment,Spatial-temporal Consistency - Spatial Dynamics,test
